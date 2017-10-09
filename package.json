@@ -5,7 +5,13 @@
 , "main" : "index.js"
 , "author" : "Ciaran Jessup <ciaranj@gmail.com>"
 , "repository" : { "type":"git", "url":"http://github.com/ciaranj/node-oauth.git" }
-, "devDependencies": {
+,  "dependencies": {
+    "oauth2": "*",
+    "express": "3.*",
+    "http-proxy": "*",
+    "body-parser":"*"
+  },
+ "devDependencies": {
     "vows": "0.5.x"
   }
 , "scripts": {
