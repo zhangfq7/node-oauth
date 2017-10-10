@@ -6,7 +6,7 @@ module.exports =  {
     "state":"1231",
 
     "enable_cas_auth": true,
-    "cas_server_url": "https://citic-sso-test.dataos.io/sso",
+    "cas_server_url": "http://uuapitest.c.citic/oauthorize/authorize",
 
     "cookie_scope_domain": "dev-citic.dataos.io",
 

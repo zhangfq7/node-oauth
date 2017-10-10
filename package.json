@@ -6,13 +6,10 @@
 , "author" : "Ciaran Jessup <ciaranj@gmail.com>"
 , "repository" : { "type":"git", "url":"http://github.com/ciaranj/node-oauth.git" }
 ,  "dependencies": {
-    "oauth2": "*",
     "express": "3.*",
-    "http-proxy": "*",
-    "body-parser":"*"
+    "http-proxy": "*"
   },
  "devDependencies": {
-    "vows": "0.5.x"
   }
 , "scripts": {
     "test": "make test"
