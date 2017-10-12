@@ -22,7 +22,7 @@ module.exports =  {
         {
             proxy_url: "http://127.0.0.1:8080",
             replaceHostname: false,
-            listen_port: "80",
+            listen_port: "8090",
             enable_ssl_port: false
         }
     ]
