@@ -6,6 +6,7 @@
 var qs = require('querystring');
 // var OAuth = require('oauth'), OAuth2 = OAuth.OAuth2;
 var oauth_auth = require('./lib/oauth-auth');
+var oauth_auth2 = require('./lib/oauth-auth2');
 var express = require('express');
 var https = require('https');
 var http = require('http');
@@ -80,8 +81,9 @@ function run_one(config, subconfig) {
     app.use(express.session(sessionoption));
 
     // Authentication
-    oauth_auth.configureOauth(app, config);
-    //console.log('ws come here ´Óoauth_auth³öÀ´ÁË');
+    // oauth_auth.configureOauth(app, config);
+    oauth_auth2.configureOauth(app, config);
+    //console.log('ws come here ï¿½ï¿½oauth_authï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
     var proxy = httpProxy.createProxyServer({
         target: subconfig.proxy_url,
@@ -106,7 +108,7 @@ function run_one(config, subconfig) {
             req['headers'].http_x_proxy_cas_username = req.session.cas_user_name;
             req['headers'].http_x_proxy_cas_email = req.session.cas_user_email
             req['headers'].http_x_proxy_cas_userid = req.session.cas_user_userId
-            req['headers'].http_x_proxy_cas_mobile = req.session.cas_user_mobile
+            // req['headers'].http_x_proxy_cas_mobile = req.session.cas_user_mobile
             req['headers'].http_x_proxy_cas_loginname = req.session.cas_user_loginName
 
             console.log("session is");
@@ -134,8 +136,8 @@ function run_one(config, subconfig) {
     proxyServer.on('upgrade', function (req, socket, head) {
 
         //req['headers'].http_x_proxy_cas_loginname ="user001";
-        // console.log('ws come here ½øÈëupgrade reqheader',req.header);
-        //console.log('ws come here ½øÈëupgrad',req.url);
+        // console.log('ws come here ï¿½ï¿½ï¿½ï¿½upgrade reqheader',req.header);
+        //console.log('ws come here ï¿½ï¿½ï¿½ï¿½upgrad',req.url);
         proxy.ws(req, socket, head);
 
 
