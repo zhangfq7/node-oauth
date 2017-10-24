@@ -108,7 +108,7 @@ function run_one(config, subconfig) {
             req['headers'].http_x_proxy_cas_username = req.session.cas_user_name;
             req['headers'].http_x_proxy_cas_email = req.session.cas_user_email
             req['headers'].http_x_proxy_cas_userid = req.session.cas_user_userId
-            // req['headers'].http_x_proxy_cas_mobile = req.session.cas_user_mobile
+            req['headers'].http_x_proxy_cas_mobile = req.session.cas_user_mobile
             req['headers'].http_x_proxy_cas_loginname = req.session.cas_user_loginName
 
             console.log("session is");
